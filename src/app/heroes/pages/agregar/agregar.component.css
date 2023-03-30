@@ -1,0 +1,17 @@
+img {
+    width: 80%;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.snackBarSuccess {
+
+    color: yellowgreen;
+
+}
+
+.snackBarWarning {
+
+    color: yellow;
+
+}

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 2;-font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Esto lo que hace es que empuja lo que nosotros coloquemos la clase a los bordes. */
+.spacer {
+    flex: 1 1 auto;
+}

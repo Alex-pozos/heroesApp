@@ -1,0 +1,45 @@
+<mat-sidenav-container fullscreen>
+    <!-- //Aqui en el mode push es para que empuje la barra y no solo se esconda el menu -->
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar>
+            <span>Menú</span>
+            <span class="spacer"></span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="./listado" (click)="sidenav.toggle()">
+                <mat-icon matListItemIcon>list</mat-icon>
+                <span>Listado de Hérores</span>
+            </a>
+            <a mat-list-item routerLink="./agregar" (click)="sidenav.toggle()">
+                <mat-icon matListItemIcon>add_circle_outline</mat-icon>
+                <span>Agregar Hérore</span>
+            </a>
+            <a mat-list-item routerLink="./buscar" (click)="sidenav.toggle()">
+                <mat-icon matListItemIcon>search</mat-icon>
+                <span>Buscar de Hérore</span>
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <a mat-button color="warn" routerLink="/**">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+        </a>
+    </mat-toolbar>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>
